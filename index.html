@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Márccio Mêsquita — Agilidade fora da TI</title>
+<meta name="description" content="Portfólio de Márccio Mêsquita, Scrum Master e Agile Coach (PSM I, LACP). Casos com contexto, intervenção, resultado e aprendizado — agilidade aplicada em áreas de negócio.">
+<meta name="author" content="Márccio Mêsquita">
+
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Márccio Mêsquita — Agilidade fora da TI">
+<meta property="og:description" content="Scrum Master · Agile Coach · PSM I. Casos com contexto, intervenção, resultado e aprendizado. Métricas medidas em dashboard corporativo e artefatos públicos verificáveis.">
+<meta property="og:url" content="https://marcciomesquita-png.github.io/">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary">
+
+<style>
+  :root{
+    --ground:#FBFAF7; --panel:#FFFFFF; --ink:#16293A; --muted:#5B7185;
+    --line:#DFE6EC; --accent:#2F7D62; --accent-soft:#EDF4F0; --shade:#F4F6F4;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --ground:#0F161E; --panel:#151E28; --ink:#E9EEF3; --muted:#9AAEBF;
+      --line:#26313D; --accent:#7CC8A4; --accent-soft:#17251F; --shade:#131C25;
+    }
+  }
+  :root[data-theme="dark"]{
+    --ground:#0F161E; --panel:#151E28; --ink:#E9EEF3; --muted:#9AAEBF;
+    --line:#26313D; --accent:#7CC8A4; --accent-soft:#17251F; --shade:#131C25;
+  }
+
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--ground); color:var(--ink);
+    font-family:"Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size:17px; line-height:1.62; -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:820px; margin:0 auto; padding:0 26px 96px}
+
+  header{padding:72px 0 40px; border-bottom:1px solid var(--line); margin-bottom:48px}
+  .eyebrow{
+    font-family:ui-monospace,Consolas,"SF Mono",Menlo,monospace;
+    font-size:12px; letter-spacing:.16em; text-transform:uppercase;
+    color:var(--accent); margin:0 0 18px;
+  }
+  h1{
+    font-family:Georgia,"Iowan Old Style","Times New Roman",serif;
+    font-size:clamp(38px,6vw,58px); line-height:1.06; font-weight:600;
+    letter-spacing:-.015em; margin:0 0 14px; text-wrap:balance;
+  }
+  .tagline{font-size:19px; color:var(--muted); margin:0 0 26px; max-width:56ch}
+  .meta{
+    display:flex; flex-wrap:wrap; gap:8px 22px;
+    font-family:ui-monospace,Consolas,"SF Mono",Menlo,monospace; font-size:13.5px;
+  }
+  .meta a{color:var(--accent); text-decoration:none; border-bottom:1px solid transparent}
+  .meta a:hover,.meta a:focus-visible{border-bottom-color:var(--accent)}
+  .meta span{color:var(--muted)}
+
+  section{margin-bottom:56px}
+  h2{
+    font-family:ui-monospace,Consolas,"SF Mono",Menlo,monospace;
+    font-size:12px; letter-spacing:.16em; text-transform:uppercase;
+    color:var(--muted); font-weight:600; margin:0 0 22px;
+    padding-bottom:9px; border-bottom:1px solid var(--line);
+  }
+  p{margin:0 0 16px; max-width:68ch}
+  .lead{font-size:19px}
+  strong{font-weight:600}
+
+  .caso{
+    background:var(--panel); border:1px solid var(--line); border-radius:3px;
+    padding:26px 28px; margin-bottom:20px;
+  }
+  .caso-head{
+    display:flex; flex-wrap:wrap; align-items:baseline; gap:10px 14px; margin-bottom:6px;
+  }
+  .caso-head h3{
+    font-family:Georgia,"Iowan Old Style",serif; font-size:22px;
+    font-weight:600; margin:0; letter-spacing:-.01em;
+  }
+  .periodo{
+    font-family:ui-monospace,Consolas,"SF Mono",Menlo,monospace;
+    font-size:12.5px; color:var(--muted); font-variant-numeric:tabular-nums;
+  }
+  .campo{display:grid; grid-template-columns:104px 1fr; gap:6px 18px; margin-top:16px}
+  .campo dt{
+    font-family:ui-monospace,Consolas,"SF Mono",Menlo,monospace;
+    font-size:11.5px; letter-spacing:.1em; text-transform:uppercase;
+    color:var(--muted); padding-top:5px;
+  }
+  .campo dd{margin:0}
+  .campo dd.destaque{color:var(--accent); font-weight:600}
+  @media (max-width:560px){
+    .campo{grid-template-columns:1fr; gap:2px}
+    .campo dt{padding-top:12px}
+  }
+
+  .nums{display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:1px;
+        background:var(--line); border:1px solid var(--line); border-radius:3px; overflow:hidden}
+  .num{background:var(--panel); padding:20px 18px}
+  .num .v{
+    font-family:Georgia,"Iowan Old Style",serif; font-size:29px; font-weight:600;
+    letter-spacing:-.02em; font-variant-numeric:tabular-nums; display:block; margin-bottom:3px;
+  }
+  .num .k{font-size:13.5px; color:var(--muted); line-height:1.4}
+
+  .artefatos{display:flex; flex-direction:column; gap:10px}
+  .art{
+    display:flex; align-items:baseline; gap:14px; padding:15px 18px;
+    background:var(--panel); border:1px solid var(--line); border-radius:3px;
+    text-decoration:none; color:inherit;
+  }
+  .art:hover,.art:focus-visible{border-color:var(--accent); background:var(--accent-soft)}
+  .art b{font-weight:600; white-space:nowrap}
+  .art span{color:var(--muted); font-size:15px}
+  .art .url{
+    margin-left:auto; font-family:ui-monospace,Consolas,monospace;
+    font-size:12.5px; color:var(--accent); white-space:nowrap;
+  }
+  @media (max-width:620px){ .art{flex-wrap:wrap} .art .url{margin-left:0; width:100%} }
+
+  .skills{display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:24px 32px}
+  .skills h4{
+    font-family:ui-monospace,Consolas,monospace; font-size:11.5px; letter-spacing:.1em;
+    text-transform:uppercase; color:var(--accent); margin:0 0 8px; font-weight:600;
+  }
+  .skills ul{margin:0; padding:0; list-style:none}
+  .skills li{padding:3px 0; font-size:15.5px; color:var(--ink)}
+
+  .limite{
+    background:var(--shade); border-left:2px solid var(--accent);
+    padding:18px 22px; border-radius:0 3px 3px 0;
+  }
+  .limite p:last-child{margin-bottom:0}
+
+  footer{
+    border-top:1px solid var(--line); padding-top:26px; margin-top:8px;
+    font-size:14.5px; color:var(--muted);
+  }
+  footer a{color:var(--accent)}
+  a:focus-visible{outline:2px solid var(--accent); outline-offset:3px; border-radius:2px}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+<header>
+  <p class="eyebrow">Portfólio profissional</p>
+  <h1>Márccio Mêsquita</h1>
+  <p class="tagline">Scrum Master · Agile Coach · Agilista — agilidade aplicada onde ela raramente chega: fora do contexto de TI.</p>
+  <div class="meta">
+    <a href="mailto:marcciomesquita@gmail.com">marcciomesquita@gmail.com</a>
+    <span>(11) 96199-6575</span>
+    <a href="https://www.linkedin.com/in/m%C3%A1rcciom%C3%AAsquita">LinkedIn</a>
+    <a href="https://github.com/marcciomesquita-png">GitHub</a>
+    <span>São Paulo, SP</span>
+  </div>
+</header>
+
+<section>
+  <h2>A tese</h2>
+  <p class="lead">Trabalhei quinze anos com o resultado antes de estudar o método que o organiza. Isso muda a forma como conduzo um time.</p>
+  <p>Passei cinco anos em uma instituição financeira regulada, dentro de um time com cadência diária, refinamento de casos e priorização por impacto — abrindo e acompanhando demandas em Jira junto às áreas técnicas. Aprendi o funcionamento de um fluxo pelo lado de quem depende dele para entregar.</p>
+  <p>Depois, com a certificação Professional Scrum Master I, apliquei agilidade em áreas que nunca ouviram falar de Scrum: comercial, jurídico, produção e financeiro. <strong>Integrar quem não tem vocabulário ágil exige mais facilitação do que um time já acostumado a cerimônias</strong> — e é ali que o papel deixa de ser ritual e vira trabalho.</p>
+</section>
+
+<section>
+  <h2>Casos</h2>
+
+  <div class="caso">
+    <div class="caso-head">
+      <h3>Acesso a mercado público em indústria gráfica</h3>
+      <span class="periodo">2024 – 2025</span>
+    </div>
+    <dl class="campo">
+      <dt>Contexto</dt>
+      <dd>Empresa tradicional, operando por demanda, sem acesso a contratos públicos e sem processo definido para disputá-los.</dd>
+      <dt>Intervenção</dt>
+      <dd>Backlog de oportunidades priorizado por probabilidade de ganho e margem. Fluxo ponta a ponta da análise de edital à entrega. Critérios de conclusão documentais para eliminar retrabalho. Métricas de fluxo — Lead Time por processo, Cycle Time de orçamento, taxa de habilitação. Integração de comercial, produção, jurídico e financeiro em rotina única de acompanhamento.</dd>
+      <dt>Resultado</dt>
+      <dd class="destaque">49 processos vencidos em órgãos das quatro esferas de governo — entre eles Supremo Tribunal Federal, Comando da Aeronáutica, Marinha do Brasil, Assembleia Legislativa de São Paulo, UERJ e Fiocruz.</dd>
+      <dt>Aprendizado</dt>
+      <dd>Em área sem cultura de processo, o ganho não vem da cerimônia — vem do critério de priorização. A pergunta que mudou a operação não foi “como organizamos o trabalho”, foi “quais disputas não deveríamos entrar”.</dd>
+    </dl>
+  </div>
+
+  <div class="caso">
+    <div class="caso-head">
+      <h3>Equipe comercial de campo — gestão de pessoas e performance</h3>
+      <span class="periodo">2018 – 2019</span>
+    </div>
+    <dl class="campo">
+      <dt>Contexto</dt>
+      <dd>Doze consultores sob liderança direta, em operação de credenciamento de meios de pagamento, com meta mensal e território distribuído.</dd>
+      <dt>Intervenção</dt>
+      <dd>Rotina diária de alinhamento de prioridades, remoção de obstáculos de rota e redistribuição de carga quando um território ficava descoberto. Indicadores de funil, produtividade e conversão abertos ao time, não só à liderança. Plano de ação acordado individualmente com quem estava abaixo da meta, revisado toda semana sobre o que mudou e o que não mudou.</dd>
+      <dt>Resultado</dt>
+      <dd>Rotina de acompanhamento instalada e sustentada, com desvio de meta tratado na semana em que aparecia — não no fechamento do mês.</dd>
+      <dt>Aprendizado</dt>
+      <dd>O indicador diz onde olhar, mas não muda nada sozinho. A mudança vinha da conversa individual e do combinado que todo mundo enxergava. Foi aqui que a gestão passou a ser de pessoas antes de ser de número.</dd>
+    </dl>
+  </div>
+
+  <div class="caso">
+    <div class="caso-head">
+      <h3>SIE — Sistema de Inteligência Estratégica</h3>
+      <span class="periodo">2025 – atual</span>
+    </div>
+    <dl class="campo">
+      <dt>Contexto</dt>
+      <dd>Construção de uma operação de consultoria do zero, usada também como laboratório de aprendizagem empírica.</dd>
+      <dt>Intervenção</dt>
+      <dd>Produto digital em produção com arquitetura de conteúdo, funil e camada de medição. Governança versionada em Git: registros de decisão arquitetural, changelog e inventário de débitos técnicos. Ciclo de hipótese, experimento, evidência e ajuste, conduzido em fluxo estruturado de trabalho assistido por IA.</dd>
+      <dt>Resultado</dt>
+      <dd>Sistema no ar e repositório público — artefatos verificáveis, não descrições. Investigação de causa raiz em falhas de produção, com correção validada por teste.</dd>
+      <dt>Aprendizado</dt>
+      <dd>Hipótese refutada é resultado válido e passou a ser registrada como tal. A mais útil até aqui: o gargalo após um evento de networking não é obter o contato inicial — é sustentar o relacionamento até a primeira reunião.</dd>
+    </dl>
+  </div>
+</section>
+
+<section>
+  <h2>De onde venho — PagSeguro PagBank, 2019–2024</h2>
+  <p>Cinco anos em gestão de carteira dentro de instituição financeira regulada, em rotina de time com cadência diária, refinamento de casos e uso operacional de Jira. Números medidos em dashboard corporativo:</p>
+  <div class="nums">
+    <div class="num"><span class="v">3.800</span><span class="k">clientes sob gestão, PF e PJ</span></div>
+    <div class="num"><span class="v">R$ 58–79 mi</span><span class="k">TPV mensal da carteira</span></div>
+    <div class="num"><span class="v">10 / 12</span><span class="k">meses de 2023 com margem operacional acima da meta</span></div>
+    <div class="num"><span class="v">150</span><span class="k">atendimentos por semana, em cadência diária</span></div>
+  </div>
+</section>
+
+<section>
+  <h2>Artefatos públicos</h2>
+  <div class="artefatos">
+    <a class="art" href="https://github.com/marcciomesquita-png/senior-scrum-master-toolkit">
+      <b>senior-scrum-master-toolkit</b>
+      <span>Cálculo de capacidade de sprint e análise de viabilidade de custo em licitação pública</span>
+      <span class="url">github.com ↗</span>
+    </a>
+    <a class="art" href="https://stakeholderbrasil.com">
+      <b>stakeholderbrasil.com</b>
+      <span>Produto digital em produção — arquitetura, funil e camada de medição</span>
+      <span class="url">stakeholderbrasil.com ↗</span>
+    </a>
+    <a class="art" href="https://github.com/marcciomesquita-png">
+      <b>Repositórios</b>
+      <span>Governança versionada: decisões arquiteturais, changelog e débitos técnicos</span>
+      <span class="url">github.com ↗</span>
+    </a>
+  </div>
+</section>
+
+<section>
+  <h2>Competências</h2>
+  <div class="skills">
+    <div>
+      <h4>Agilidade</h4>
+      <ul>
+        <li>Scrum · Kanban · Lean</li>
+        <li>Backlog e priorização por valor</li>
+        <li>Definition of Done</li>
+        <li>Facilitação e gestão visual</li>
+        <li>Gestão de fluxo</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Métricas</h4>
+      <ul>
+        <li>Lead Time · Cycle Time</li>
+        <li>Throughput</li>
+        <li>OKR</li>
+        <li>KPIs de carteira e margem</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Ferramentas</h4>
+      <ul>
+        <li>Jira · Azure DevOps</li>
+        <li>Confluence · Miro · Trello</li>
+        <li>Git e GitHub · VS Code</li>
+        <li>CRM · WordPress · Analytics</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Certificações</h4>
+      <ul>
+        <li>Professional Scrum Master I</li>
+        <li>Lean Agile Coach Professional</li>
+        <li>Kanban na Prática</li>
+        <li>Métricas e OKR — Management 3.0</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>O que ainda não tenho</h2>
+  <div class="limite">
+    <p>Não tenho experiência formal de agilidade em escala, com múltiplos times e dependências organizacionais. É exatamente o que busco no próximo passo, e prefiro dizer isso aqui a deixar que se descubra numa entrevista.</p>
+    <p>O que ofereço em troca é a metade que costuma faltar: leitura de negócio, conversa com stakeholder difícil e indicador apresentado de forma que quem cobra resultado entenda e confie.</p>
+  </div>
+</section>
+
+<footer>
+  Pós-graduação em Gestão Estratégica de Negócios — Universidade Presbiteriana Mackenzie ·
+  Bacharelado em Administração — FESP.
+  Currículo completo sob solicitação: <a href="mailto:marcciomesquita@gmail.com">marcciomesquita@gmail.com</a>
+</footer>
+
+</div>
+
+</body>
+</html>
