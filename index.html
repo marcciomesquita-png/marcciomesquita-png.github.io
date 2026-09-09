@@ -150,7 +150,7 @@
 <header>
   <p class="eyebrow">Portfólio profissional</p>
   <h1>Márccio Mêsquita</h1>
-  <p class="tagline">Scrum Master · Agile Coach · Agilista — agilidade aplicada onde ela raramente chega: fora do contexto de TI.</p>
+  <p class="tagline">Scrum Master · Agile Coach · Agilista — agilidade aplicada onde ela raramente chega: fora do contexto de TI. <strong>49 processos públicos vencidos</strong> partindo de uma operação que não existia.</p>
   <div class="meta">
     <a href="mailto:marcciomesquita@gmail.com">marcciomesquita@gmail.com</a>
     <span>(11) 96199-6575</span>
@@ -217,7 +217,24 @@
       <dt>Resultado</dt>
       <dd>Sistema no ar e repositório público — artefatos verificáveis, não descrições. Investigação de causa raiz em falhas de produção, com correção validada por teste.</dd>
       <dt>Aprendizado</dt>
-      <dd>Hipótese refutada é resultado válido e passou a ser registrada como tal. A mais útil até aqui: o gargalo após um evento de networking não é obter o contato inicial — é sustentar o relacionamento até a primeira reunião.</dd>
+      <dd>Hipótese refutada é resultado válido e passou a ser registrada como tal. Separar a camada que decide da camada que executa foi o que tornou o trabalho assistido por IA auditável — sem isso, não dá para saber o que foi escolha e o que foi automatismo.</dd>
+    </dl>
+  </div>
+
+  <div class="caso">
+    <div class="caso-head">
+      <h3>Instrumentação de fluxo: data de entrada, aging e previsão</h3>
+      <span class="periodo">2026</span>
+    </div>
+    <dl class="campo">
+      <dt>Contexto</dt>
+      <dd>Um fluxo real com dezesseis itens em andamento, sem data de entrada confiável e sem leitura de envelhecimento. O que perseguir e o que abandonar decidido por impressão, não por dado.</dd>
+      <dt>Intervenção</dt>
+      <dd>Board com entrada, estágio e canal por item, <strong>separando a data em que o sistema registra da data em que o trabalho entrou</strong>. Cálculo de aging, lead time e distribuição de throughput. Consultas em JQL escritas para responder pergunta de gestão — o que está parado, quanto se carrega em paralelo, quanto tempo até encerrar — e não para listar cartão.</dd>
+      <dt>Resultado</dt>
+      <dd class="destaque">Um item aparecia com dois dias de idade no board e tinha 135. O erro estava no campo de data usado como base de cálculo. Corrigido, o funil revelou três itens além do limite de retorno e um único ciclo fechado — a amostra real disponível para previsão.</dd>
+      <dt>Aprendizado</dt>
+      <dd>A data que o sistema registra raramente é a data em que o trabalho entrou. Quem calcula lead time sobre a data de criação produz número errado com aparência de número certo — e ninguém questiona, porque o gráfico sai bonito.</dd>
     </dl>
   </div>
 </section>
@@ -271,7 +288,9 @@
       <h4>Métricas</h4>
       <ul>
         <li>Lead Time · Cycle Time</li>
-        <li>Throughput</li>
+        <li>Throughput · Aging · WIP</li>
+        <li>Diagrama de Fluxo Cumulativo</li>
+        <li>Previsão por percentil</li>
         <li>OKR</li>
         <li>KPIs de carteira e margem</li>
       </ul>
@@ -298,7 +317,7 @@
 </section>
 
 <section>
-  <h2>O que ainda não tenho</h2>
+  <h2>O limite, dito de frente</h2>
   <div class="limite">
     <p>Não tenho experiência formal de agilidade em escala, com múltiplos times e dependências organizacionais. É exatamente o que busco no próximo passo, e prefiro dizer isso aqui a deixar que se descubra numa entrevista.</p>
     <p>O que ofereço em troca é a metade que costuma faltar: leitura de negócio, conversa com stakeholder difícil e indicador apresentado de forma que quem cobra resultado entenda e confie.</p>
